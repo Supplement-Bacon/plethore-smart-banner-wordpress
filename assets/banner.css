@@ -1,0 +1,37 @@
+.plethore-banner {
+    position: relative;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    opacity: 0;
+    animation: slideDown 0.5s ease-out 1s forwards;
+}
+
+.banner-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Classe pour l'effet de disparition */
+.fade-out {
+    opacity: 0;
+}
