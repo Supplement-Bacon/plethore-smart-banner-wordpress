@@ -1,13 +1,21 @@
 document.addEventListener("DOMContentLoaded", async function () {
     try {
+        const localStorageKey = "plethore-banner-closed-at";
+
         // Check if the user is on a mobile device
         if (window.innerWidth > 768) {
             return;
         }
 
         // Check if banner has been closed before
-        if (localStorage.getItem("plethore-banner-closed") === "true") {
-            return;
+        const closedAt = localStorage.getItem(localStorageKey);
+        if (closedAt && !isNaN(closedAt)) {
+            const closedTimestamp = Number(closedAt);
+            const sixMonthsAgo = Date.now() - 6 * 30 * 24 * 60 * 60 * 1000; // approximate date 6 months ago
+            if (closedTimestamp > sixMonthsAgo) {
+                // Hide the banner if it has been closed less than 6 months ago
+                return;
+            }
         }
 
         const templateResponse = await fetch(PlethoreBannerData.templateUrl);
@@ -45,7 +53,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         // Close event listener injection - save state in local storage
         banner.querySelector("#plethore-banner-close").addEventListener("click", function () {
-            localStorage.setItem("plethore-banner-closed", "true");
+            localStorage.setItem(localStorageKey, Date.now());
             const bannerElement = banner.querySelector("#plethore-banner");
             bannerElement.style.display = "none";
         });
