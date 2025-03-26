@@ -1,6 +1,15 @@
 document.addEventListener("DOMContentLoaded", async function () {
     try {
-        // Charger la template HTML
+        // Check if the user is on a mobile device
+        if (window.innerWidth > 768) {
+            return;
+        }
+
+        // Check if banner has been closed before
+        if (localStorage.getItem("plethore-banner-closed") === "true") {
+            return;
+        }
+
         const templateResponse = await fetch(PlethoreBannerData.templateUrl);
         const html = await templateResponse.text();
 
@@ -10,14 +19,20 @@ document.addEventListener("DOMContentLoaded", async function () {
         const banner = document.createElement("div");
         banner.innerHTML = html;
 
-        const titleElement = banner.querySelector("#plethore-banner-title");
+        const titleElement = banner.querySelector(".plethore-banner-title");
         titleElement.innerText = data.title;
-        const subtitleElement = banner.querySelector("#plethore-banner-subtitle");
+        const subtitleElement = banner.querySelector(".plethore-banner-subtitle");
         subtitleElement.innerText = data.subtitle;
 
-        document.body.prepend(banner);
+        // Close event listener - save state in local storage
+        banner.querySelector("#banner-close").addEventListener("click", function () {
+            localStorage.setItem("plethore-banner-closed", "true");
+            const bannerElement = banner.querySelector("#plethore-banner");
+            bannerElement.style.display = "none";
+        });
 
-        // Faire la requête AJAX
+        // Render the banner
+        document.body.prepend(banner);
     } catch (error) {
         console.error("Plethore Smart Banner error:", error);
     }
