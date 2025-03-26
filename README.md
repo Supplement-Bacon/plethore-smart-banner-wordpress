@@ -2,4 +2,4 @@
 
 Wordpress plugin that add smart banner to promote mobile app
 
-Supplement Bacon - Copyright © 25025
+Supplement Bacon - Copyright © 2025
