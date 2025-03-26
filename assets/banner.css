@@ -9,20 +9,24 @@
     transition: opacity 2s ease;
 }
 
+/* Typography */
 .plethore-banner-title,
 .plethore-banner-subtitle {
     margin: 0;
     padding: 0;
 }
 .plethore-banner-title {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 15px;
     color: #000;
 }
 .plethore-banner-subtitle {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
     color: #000;
 }
 
+/* Typography */
 .plethore-banner-content-wrapper {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: #fff;
@@ -31,45 +35,45 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.banner-close {
+.plethore-banner-close {
     border: none;
     color: #000;
     font-size: 20px;
     cursor: pointer;
     background: none;
 }
-.banner-space-h {
+.plethore-banner-space-h {
     display: flex;
     flex-direction: row;
 }
-.banner-space-v {
+.plethore-banner-space-v {
     display: flex;
     flex-direction: column;
 }
-.gap-15 {
+.plethore-gap-15 {
     gap: 15px;
 }
-.gap-10 {
+.plethore-gap-10 {
     gap: 10px;
 }
-.gap-5 {
+.plethore-gap-5 {
     gap: 5px;
 }
-.gap-0 {
+.plethore-gap-0 {
     gap: 0;
 }
-.banner-app-icon {
+.plethore-banner-app-icon {
     width: 50px;
     height: 50px;
     border-radius: 10px;
 }
-.space-between {
+.plethore-space-between {
     justify-content: space-between;
 }
-.align-items-center {
+.plethore-align-items-center {
     align-items: center;
 }
-.banner-cta {
+.plethore-banner-button {
     background-color: #000;
     color: #fff;
     font-weight: 500;
@@ -83,7 +87,7 @@
     display: inline-block;
     transition: all 0.3s ease;
 }
-.banner-cta:hover {
+.plethore-banner-cta:hover {
     transform: scale(1.05);
 }
 @keyframes slideDown {
