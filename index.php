@@ -8,14 +8,13 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://github.com/supplement-bacon/plethore-smart-banner
+ * @link              https://github.com/Supplement-Bacon/plethore-smart-banner-wordpress
  * @package           Plethore_Smart_Banner
- * @author			  Samuel Hassid
  *
  * @wordpress-plugin
  * Plugin Name:       Plethore Smart Banner
  * Description:       Display a smart banner on your website to promote your mobile app.
- * Version:           0.0.1
+ * Version:           1.0.0
  * Requires PHP:      7.4.0
  * Author:            Plethore
  * Author URI:        https://supplement-bacon.com
@@ -60,7 +59,7 @@ class Plethore_Smart_Banner
 
         PucFactory::buildUpdateChecker(
             // TODO: Replace the URL with the actual URL of the update checker
-            'https://cafoutche.supplement-bacon.agency/wordpress/plethore-smart-banner.json',
+            'https://smart-banner.pletho.re/plugin-metadata.json',
             __FILE__, //Full path to the main plugin file or functions.php.
             'plethore-smart-banner'
         );
