@@ -22,34 +22,26 @@ document.addEventListener("DOMContentLoaded", async function () {
         const html = await templateResponse.text();
 
         const dataResponse = await fetch(PlethoreBannerData.dataUrl);
-        const initialData = await dataResponse.json();
-
-        const dataToMerge = {
-            iconUrl:
-                "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5b/b0/fb/5bb0fb13-4afa-c92d-7f23-afb06645e0bb/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/230x0w.webp",
-            buttonUrl: "https://google.fr",
-            buttonLabel: "Download",
-        };
-
-        const data = { ...initialData, ...dataToMerge };
+        const data = await dataResponse.json();
+        const localizedData = data[getLocale()];
 
         const banner = document.createElement("div");
         banner.innerHTML = html;
 
         //Icon url injection
         const iconElement = banner.querySelector(".plethore-banner-app-icon");
-        iconElement.src = data.iconUrl;
+        iconElement.src = localizedData.iconUrl;
 
         //Title and subtitle injection
         const titleElement = banner.querySelector(".plethore-banner-title");
-        titleElement.innerText = data.title;
+        titleElement.innerText = localizedData.title;
         const subtitleElement = banner.querySelector(".plethore-banner-subtitle");
-        subtitleElement.innerText = data.subtitle;
+        subtitleElement.innerText = localizedData.subtitle;
 
         //Buton label and url injection
         const buttonElement = banner.querySelector(".plethore-banner-button");
-        buttonElement.innerText = data.buttonLabel;
-        buttonElement.href = data.buttonUrl;
+        buttonElement.innerText = localizedData.buttonLabel;
+        buttonElement.href = localizedData.buttonUrl;
 
         // Close event listener injection - save state in local storage
         banner.querySelector("#plethore-banner-close").addEventListener("click", function () {
@@ -62,5 +54,15 @@ document.addEventListener("DOMContentLoaded", async function () {
         document.body.prepend(banner);
     } catch (error) {
         console.error("Plethore Smart Banner error:", error);
+    }
+
+    /**
+     * Get locale from navigator
+     * @returns 'fr' or 'en'
+     */
+    function getLocale() {
+        const locale = navigator.language.substring(0, 2);
+        const supportedLocales = ["fr", "en"];
+        return supportedLocales.includes(locale) ? locale : "en";
     }
 });
