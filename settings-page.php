@@ -32,7 +32,10 @@ function plethore_smart_banner_register_settings_page()
         'plethore-smart-banner-setup-section',
     );
 
-    register_setting('plethore-smart-banner-setup', Plethore_Smart_Banner::SETTING_ACCOUNT_SLUG);
+    register_setting(
+        'plethore-smart-banner-setup',
+        Plethore_Smart_Banner::SETTING_ACCOUNT_SLUG
+    );
 }
 function plethore_smart_banner_field_account_slug_callback()
 {
