@@ -83,3 +83,15 @@ function plethore_smart_banner_init()
 {
     Plethore_Smart_Banner::get_instance();
 }
+
+register_activation_hook(__FILE__, 'plethore_smart_banner_activate');
+
+function plethore_smart_banner_activate()
+{
+    if (false === get_option(Plethore_Smart_Banner::SETTING_ACCOUNT_SLUG)) {
+        update_option(
+            Plethore_Smart_Banner::SETTING_ACCOUNT_SLUG,
+            '%%DEFAULT_ACCOUNT_SLUG%%'
+        );
+    }
+}
