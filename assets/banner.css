@@ -43,6 +43,8 @@
     font-size: 20px !important;
     cursor: pointer !important;
     background: none !important;
+    width: 25px !important;
+    height: 25px !important;
 }
 .plethore-banner-space-h {
     display: flex !important;
