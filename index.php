@@ -12,7 +12,7 @@
  * @package           Plethore_Smart_Banner
  *
  * @wordpress-plugin
- * Plugin Name:       Plethore Smart Banner
+ * Plugin Name:       Pléthore Smart Banner
  * Description:       Display a smart banner on your website to promote your mobile app.
  * Version:           1.0.0
  * Requires PHP:      7.4.0
