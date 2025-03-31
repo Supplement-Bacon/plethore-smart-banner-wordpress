@@ -31,7 +31,7 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     background: #fff !important;
     padding: 10px !important;
-    margin: 20px !important;
+    margin: 15px !important;
     border-radius: 10px !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
 }
@@ -89,6 +89,9 @@
 }
 .plethore-banner-cta:hover {
     transform: scale(1.05);
+}
+.w-full {
+    width: 100% !important;
 }
 @keyframes slideDown {
     from {
