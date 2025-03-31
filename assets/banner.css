@@ -1,9 +1,9 @@
 .plethore-banner {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 9999;
-    color: #fff;
+    position: fixed !important;
+    width: 100% !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+    color: #fff !important;
     opacity: 0;
     animation: slideDown 0.5s ease-out 1s forwards;
     transition: opacity 2s ease;
@@ -12,80 +12,80 @@
 /* Typography */
 .plethore-banner-title,
 .plethore-banner-subtitle {
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 .plethore-banner-title {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    color: #000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 15px !important;
+    color: #000 !important;
 }
 .plethore-banner-subtitle {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    color: #000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 12px !important;
+    color: #000 !important;
 }
 
 /* Typography */
 .plethore-banner-content-wrapper {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background: #fff;
-    padding: 10px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    background: #fff !important;
+    padding: 10px !important;
+    margin: 20px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
 }
 .plethore-banner-close {
-    border: none;
-    color: #000;
-    font-size: 20px;
-    cursor: pointer;
-    background: none;
+    border: none !important;
+    color: #000 !important;
+    font-size: 20px !important;
+    cursor: pointer !important;
+    background: none !important;
 }
 .plethore-banner-space-h {
-    display: flex;
-    flex-direction: row;
+    display: flex !important;
+    flex-direction: row !important;
 }
 .plethore-banner-space-v {
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
 }
 .plethore-gap-15 {
-    gap: 15px;
+    gap: 15px !important;
 }
 .plethore-gap-10 {
-    gap: 10px;
+    gap: 10px !important;
 }
 .plethore-gap-5 {
-    gap: 5px;
+    gap: 5px !important;
 }
 .plethore-gap-0 {
-    gap: 0;
+    gap: 0 !important;
 }
 .plethore-banner-app-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 10px !important;
 }
 .plethore-space-between {
-    justify-content: space-between;
+    justify-content: space-between !important;
 }
 .plethore-align-items-center {
-    align-items: center;
+    align-items: center !important;
 }
 .plethore-banner-button {
-    background-color: #000;
-    color: #fff;
-    font-weight: 500;
-    padding: 4px 12px;
-    border: none;
-    border-radius: 15px;
-    font-size: 14px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.3s ease;
+    background-color: #000 !important;
+    color: #fff !important;
+    font-weight: 500 !important;
+    padding: 4px 12px !important;
+    border: none !important;
+    border-radius: 15px !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    transition: all 0.3s ease !important;
 }
 .plethore-banner-cta:hover {
     transform: scale(1.05);
